@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/custom-product-block",
+  "version": "0.1.0",
+  "title": "Custom Product Block",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "Custom Product Block"
+    },
+    "products": {
+      "type": "array",
+      "default": []
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "date"
+    },
+    "itemsPerRow": {
+      "type": "number",
+      "default": 3
+    },
+    "totalItems": {
+      "type": "number",
+      "default": 10
+    },
+    "checkboxField": {
+      "type": "boolean",
+      "default": true
+    },
+    "toggleField": {
+      "type": "boolean"
+    }
+  },
+  "textdomain": "custom-product-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
