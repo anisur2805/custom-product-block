@@ -5,19 +5,13 @@ import { addQueryArgs } from "@wordpress/url";
 import {
 	useBlockProps,
 	RichText,
-	AlignmentToolbar,
-	BlockControls,
 	InspectorControls,
 } from "@wordpress/block-editor";
 import {
 	ToggleControl,
 	RangeControl,
 	PanelBody,
-	PanelRow,
-	RadioControl,
 	SelectControl,
-	CheckboxControl,
-	TextControl,
 } from "@wordpress/components";
 
 import "./editor.scss";
@@ -29,11 +23,7 @@ export default function Edit({ attributes, setAttributes }) {
 		orderBy,
 		totalItems,
 		itemsPerRow,
-		checkboxField,
-		radioField,
-		textField,
-		toggleField,
-		selectField,
+		toggleField
 	} = attributes;
 
 	useEffect(() => {

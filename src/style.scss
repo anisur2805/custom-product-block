@@ -41,3 +41,97 @@
     display: inline-block;
     content: unset;
 }
+
+// Frontend style.
+.custom-product-block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.custom-product-block-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-product-block-header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+// Products list/grid view.
+.custom-product-block-fe .products-views span {
+    cursor: pointer;
+}
+.custom-product-block-fe ul.products.list {
+    grid-template-columns: repeat(1, 1fr);
+}
+.custom-product-block-fe ul.products {
+    grid-template-columns: repeat(3, 1fr);
+}
+.custom-product-block-fe ul.loading.products {
+    background: #ddd;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    
+}
+
+.custom-product-block-fe ul.products.list li {
+    padding: 10px;
+}
+.custom-product-block-fe ul.products.list .product-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.custom-product-block-fe ul.products.list .product-inner .product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 2;
+    align-items: flex-start;
+}
+
+.custom-product-block-fe ul.products.list img {
+    margin-bottom: 0;
+}
+.custom-product-block-fe ul.products.list .product-inner .product-thumbnail {
+    flex: 1;
+}
+
+.custom-product-block-fe ul.products li .product-description {
+    display: none;
+}
+
+.custom-product-block-fe ul.products.list li .product-description {
+    display: block;
+}
+
+
+// Loader.
+
+.cpb-spinner {
+    background: url(../assets/images/spinner.gif) no-repeat;
+    background-size: 20px 20px;
+    display: inline-block;
+    visibility: hidden;
+    float: right;
+    vertical-align: middle;
+    opacity: .7;
+    width: 20px;
+    height: 20px;
+    margin: 4px 10px 0;
+}
+.cpb-spinner.is-active {
+    visibility: visible;
+}

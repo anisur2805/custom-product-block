@@ -32,10 +32,6 @@
       "type": "number",
       "default": 10
     },
-    "checkboxField": {
-      "type": "boolean",
-      "default": true
-    },
     "toggleField": {
       "type": "boolean"
     }

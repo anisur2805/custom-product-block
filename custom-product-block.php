@@ -30,3 +30,13 @@ function custom_product_block_init() {
 add_action( 'init', 'custom_product_block_init' );
 
 require_once __DIR__ . '/functions.php';
+
+define('CPB_PLUGIN_DIR', plugin_dir_path(__FILE__));
+
+add_action('wp_enqueue_scripts', 'cpb_enqueue_scripts');
+function cpb_enqueue_scripts() {
+	wp_enqueue_script( 'cpb-main', plugins_url( 'assets/js/main.js', __FILE__ ), array('jquery'), '1.0.0', 'all' );
+	wp_localize_script( 'cpb-main', 'cpb', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+	));
+}
